@@ -1,14 +1,13 @@
+import { AppSidebar } from "@/components/sidebar/app-sidebar"
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar"
-import { AppSidebar } from "@/components/app-sidebar"
 import { Outlet } from "react-router"
 export default function ISidebar() {
-  return (
-    <SidebarProvider >
+  return (<div className="flex justify-start">
+    <SidebarProvider className="w-[260px] flex-1 " >
       <AppSidebar  />
         <SidebarTrigger />
-      <main>
-        <Outlet/>
-      </main>
     </SidebarProvider>
-  )
+    <main className="w-full ml-4"><Outlet/></main>
+     
+  </div>)
 }
