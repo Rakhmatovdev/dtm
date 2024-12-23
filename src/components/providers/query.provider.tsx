@@ -2,15 +2,15 @@
 import {QueryClient, QueryClientProvider} from "@tanstack/react-query";
 import {FC} from "react";
 
-import {toast} from "@/hooks/use-toast";
+
 import { ChildrenProps, IError } from "@/types";
 
 
 const onHandleError = (error:Error | IError) => {
 if ((error as IError).response?.data?.message) {
-return toast({description:(error as IError).response.data.message,variant: 'destructive'});
+return (error as IError).response.data.message
 }
-return toast({description:'Something went wrong',variant: 'destructive'});
+return 'Something went wrong'
 }
 
 const queryClient = new QueryClient({
