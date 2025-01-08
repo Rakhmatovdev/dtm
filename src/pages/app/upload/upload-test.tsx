@@ -99,7 +99,7 @@ const UploadTests: React.FC = () => {
               <UInput className="sm:w-[200px]" name="topic_name" control={control} />
             </div>
             <div className="fff sm:gap-32">
-              <p className="utext pr-[24px]">Icon <span className="text-rose-500">*</span></p>
+              <p className="utext pr-[24px]">File <span className="text-rose-500">*</span></p>
               <Controller
                 name="file"
                 control={control}
