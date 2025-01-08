@@ -1,8 +1,8 @@
-import { itemSetting } from "@/types/data"
-import {  Collapse, CollapseProps } from "antd"
-import PersonalInfo from "./PersonalInfo";
-import ImportandDate from "./ImportandDate";
 import UBreadcrumb from "@/components/ui/UBreadcrumb";
+import { itemSetting } from "@/types/data";
+import { Collapse, CollapseProps } from "antd";
+import ImportandDate from "./ImportandDate";
+import PersonalInfo from "./PersonalInfo";
 
 const Settings = () => {
 
@@ -24,7 +24,7 @@ const Settings = () => {
 
 
   return (
-    <div className="h-[86.2vh]" >
+    <div className="soh" >
    <UBreadcrumb items={itemSetting}/>
 
    

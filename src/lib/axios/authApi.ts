@@ -2,24 +2,22 @@ import axios from 'axios';
 
 
 const authApi = axios.create({
-  baseURL: "https://api.amaar.uz",
-  timeout: 10000, 
-  withCredentials:true
+  baseURL: "https://dtm.dtpi-dictionary.uz",
+  timeout: 10000,
 });
 
 authApi.interceptors.request.use(
   (config) => {
     console.log('Auth Interceptor ishlamoqda',config);
-    const token = localStorage.getItem('acessToken'); 
-    if (token) {
-      config.headers['Authorization'] = `Bearer ${token}`;
-    }
+    const token = sessionStorage.getItem('accessToken');
+    if (token) {config.headers['Authorization'] = `Bearer ${token}`;}
     return config;
   },
   (error) => {
-    return Promise.reject(error);
+      console.log('Response Data:', error.response.data);
   }
 );
+
 
 
 export default authApi;

@@ -1,30 +1,31 @@
 import UBreadcrumb from "@/components/ui/UBreadcrumb";
 import UFile from "@/components/ui/UFile";
 import USelect from "@/components/ui/USelect";
-import { TAdsD } from "@/types";
-import { itemAddD, OProduct } from "@/types/data";
+import { TExamA } from "@/types";
+import { itemCreateD, OProduct } from "@/types/data";
 import { EditOutlined, EyeOutlined, PlusOutlined } from "@ant-design/icons";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { useParams } from "react-router";
-import { v4 as uuidv4 } from "uuid";
 
-const AddUpdate = () => {
+const UpdateExam = () => {
     const { id } = useParams<{ id: string }>();
 
     const { control, handleSubmit } = useForm({
         defaultValues: {
-            product: "",
-            image_ru: "",
-            image_en: "",
-            id: id || uuidv4(),
+            category: null,
+            topics:[],
+            start_time:"",
+            end_time: "",
+            total_questions: null,
+            time_limit:"",
         },
     });
 
-    const onSubmit: SubmitHandler<TAdsD> = (data) => console.log(data);
+    const onSubmit: SubmitHandler<TExamA> = (data) => console.log(data);
 
     return (
-        <div className="h-[86.2vh]">
-          <UBreadcrumb items={itemAddD} />
+        <div className="soh">
+          <UBreadcrumb items={itemCreateD} />
 
             <div className="mt-7">
                 <form className="flex gap-4 flex-col sm:flex-row" onSubmit={handleSubmit(onSubmit)}>
@@ -58,7 +59,7 @@ const AddUpdate = () => {
                         </div>
 
                         <div className="fff  sm:gap-32">
-                            <p className="utext pr-[10px]">UUID</p>
+                            <p className="utext pr-[10px]">ID</p>
                             <div className="text-sm">{id}</div>
                         </div>
                     </div>
@@ -73,4 +74,4 @@ const AddUpdate = () => {
     );
 };
 
-export default AddUpdate;
+export default UpdateExam;

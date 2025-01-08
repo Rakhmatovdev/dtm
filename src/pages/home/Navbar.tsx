@@ -1,20 +1,16 @@
 import { Link } from "react-router";
 import { KeyOutlined, LogoutOutlined,  SettingOutlined, UserOutlined } from "@ant-design/icons";
 
-import { logOut } from "@/service";
 import {  Popover } from 'antd';
 import { useState } from "react";
 import USearch from "@/components/ui/USearch";
+import authService from "@/services/auth-service.ts";
 
 const Navbar = () => {
 
 
     const [open, setOpen] = useState(false);
 
-    // const hide = () => {
-    //   setOpen(false);
-    // };
-  
     const handleOpenChange = (newOpen: boolean) => {
       setOpen(newOpen);
     };
@@ -28,7 +24,7 @@ const Navbar = () => {
         
          <Popover
       content={
-      <form onSubmit={logOut} className=" space-y-2">
+      <form onSubmit={authService.logout} className=" space-y-2">
             <Link
               to={"users/settings"}
               className="flex gap-2 items-center cursor-pointer" onClick={()=>setOpen(false)}
@@ -42,7 +38,7 @@ const Navbar = () => {
              <KeyOutlined /> <span className="text-sm">Password</span>{" "}
             </Link>
             <button type="submit" className="flex gap-2 items-center cursor-pointer" >
-            <LogoutOutlined /> <span className="text-sm"> Logout</span>{" "}
+            <LogoutOutlined /> <span className="text-sm"> Logout</span>
             </button>
             </form>
       }

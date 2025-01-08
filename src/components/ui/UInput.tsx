@@ -11,6 +11,7 @@ interface AppProps {
   suffix?:any,
   name: string;
   control: any;
+  required?: boolean;
 }
 
 const UInput: React.FC<AppProps> = ({

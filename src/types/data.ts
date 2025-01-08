@@ -1,17 +1,16 @@
 
-//add
 
-export const itemsAdd=[
+export const itemsExam=[
     {
       title: "Home",
       href: "/",
     },
     {
-      title: "App",
+      title: "Exam",
       href: "#",
     },
     {
-      title: "Adds",
+      title: "Create",
     },
   ]
   export  const Dproducts = [
@@ -33,7 +32,7 @@ export const itemsAdd=[
     },
   ];
 
-export const itemAddD=[
+export const itemCreateD=[
     {
       title: 'Home',
       href:"/"
@@ -43,8 +42,8 @@ export const itemAddD=[
       href: '#',
     },
     {
-      title: 'Adds',
-      href:'/app/adds'    
+      title: 'Create',
+      href:'/app/exam'
     },
     {
       title:'Add'
@@ -64,72 +63,7 @@ export const itemAddD=[
           {value:"Luxurious Elixir Rough4",label:"Luxurious Elixir Rough"},
   ]
  
-  export const OGender=[
-    {value:'',label:"----"}
-    ,{value:"male",label:"Male"},
-    {value:"femail",label:"Female"},
 
-  ]
-
-
-//banner
-
- export const Dbanners = [
-    {
-      id: "1098b28f-efbc-4a8d-91e9-9984f8bf58ef",
-      product: "	Luxurious Elixir Rough",
-      image_ru:
-        "https://parfumeapi.pythonanywhere.com/media/banner_images/Screenshot_2024-11-29_at_10.11.33.png",
-      image_en:
-        "https://parfumeapi.pythonanywhere.com/media/banner_images/Screenshot_2024-11-29_at_10_ISpXBgE.11.33.png",
-        title:"Test"
-    },
-    {
-      id: "9df6f316-dc6e-465c-8b50-fdf1d3350d23",
-      product: "	Luxurious Elixir Rough",
-      image_ru:
-        "https://parfumeapi.pythonanywhere.com/media/ads/DALLE-2024-11-20-10_RnxSVo2.09.jpeg",
-      image_en:
-        "https://parfumeapi.pythonanywhere.com/media/ads/DALLE-2024-11-20-10_EAnwGuG.09.jpeg",
-         title:'Brand'
-    },
-   
-  ];
-
-
-  export const itemBanner=[
-    {
-      title: 'Home',
-      href:"/"
-    },
-    {
-      title: 'App',
-      href: '#',
-    },
-    {
-      title: 'Banners',
-
-    },
-  ]
-
-
-  export const itemBannerD=[
-    {
-      title: 'Home',
-      href:"/"
-    },
-    {
-      title: 'App',
-      href: '#',
-    },
-    {
-      title: 'Banners',
-      href:'/app/banners'    
-    },
-    {
-      title:'Banner'
-    }
-  ]
 
 
 
@@ -191,251 +125,6 @@ export const itemAddD=[
     }
   ]
 
-
-
-
-  export const Dcompany = [
-    {
-      id: "e0c2519e-f1ce-4fd9-b8bb-39ffdac44383",
-      name: "JRN	",
-      logo:"https://parfumeapi.pythonanywhere.com/media/ads/DALLE-2024-11-20-10_RnxSVo2.09.jpeg",
-      callcenter :"+99894960926",
-      mail:"rakhmatovjasur3@gmail.com",
-      address_ru:"Tashkent",
-      address_en:"Tashkent",
-      free_delivery:300,
-      delivery_price:200
-    },]
-
-    export const itemCompany=[
-      {
-        title: 'Home',
-        href:"/"
-      },
-      {
-        title: 'App',
-        href: '#',
-      },
-      {
-        title: 'Companys',
-      },
-    ]
-
-
-    export const itemCompanyD=[
-      {
-        title: 'Home',
-        href:"/"
-      },
-      {
-        title: 'App',
-        href: '#',
-      },
-      {
-        title: 'Companys',
-        href:'/app/company'    
-      },
-      {
-        title:'Company'
-      }
-    ]
-
-    export  const Dcontacts = [
-      {
-        id: "7eae118d-cce5-4586-ba3d-b2ab2a4b8568",
-        info_ru: "	+998949760926",
-        info_en: "	+998932280906",
-      },
-    ];
-
-    export const itemContacts=[
-      {
-        title: "Home",
-        href: "/",
-      },
-      {
-        title: "App",
-        href: "#",
-      },
-      {
-        title: "Contacts",
-      },
-    ]
-
-    export const itemContactsD=[
-      {
-        title: "Home",
-        href: "/",
-      },
-      {
-        title: "App",
-        href: "#",
-      },
-      {
-        title: "Contacts", 
-        href:'/app/contacts'    
-      },
-      {
-        title: 'Contact',
-       
-      }
-
-    ]
-
-
-
-export const DProducts=[
-  {
-id:"f0d2bce5-46a9-48cb-bd69-3edc938f7b36"   ,
-title_en:"Luxurious Elixir Rough", 
-title_ru: "Роскошный эликсир грубый",
-price:222.00,
-discount_price:0.05,
-is_discounted:true,
-is_show_new_arrival:true,
-is_best_sellers:true,
-is_recommended:true,
-category:"Vintage Treasures Collection",
-quantity:0.0,
-description_ru:"100 ml",
-description_en:"150 ml" ,
-gender:'Male',
-image:[{
-  id:"ae59d376-dbee-4d64-8934-13cd603a3a8a",
-  image:"https://parfumeapi.pythonanywhere.com/media/product_images/p2_NPrnYNj.png"
-  }
-]
-  },
-  {
-id:"863afc8f-e761-4a81-a20b-b15e11aede91"   ,
-title_en:"Luxurious Elixir Rough", 
-title_ru: "Роскошный эликсир грубый",
-price:202.00,
-discount_price:1.00,
-is_discounted:false,
-is_show_new_arrival:false,
-is_best_sellers:false,
-is_recommended:false,
-category:"Special Occasions Collection",
-quantity:10.0,
-description_ru:"100 ml",
-description_en:"150 ml" ,
-gender:'Male',
-image:[{
-  id:"700b52d1-571c-4a73-aeff-29a2ac222ee0",
-  image:"https://parfumeapi.pythonanywhere.com/media/product_images/p3_LaSdduN.png"
-  }
-]
-  },
-  {
-id:"5dff8bb7-f971-484c-ab55-e6bd0822b8ea"   ,
-title_en:"Luxurious Elixir Rough", 
-title_ru: "Роскошный эликсир грубый",
-price:220.00,
-discount_price:2.00,
-is_discounted:true,
-is_show_new_arrival:false,
-is_best_sellers:false,
-is_recommended:false,
-category:"Travel Essentials Collection",
-quantity:18.0,
-description_ru:"100 ml",
-description_en:"150 ml" ,
-gender:'Male',
-image:[{
-  id:"298845b4-16fe-496d-9cd3-66acf91fadbc",
-  image:"https://parfumeapi.pythonanywhere.com/media/product_images/p5_9xLxppP.png"
-  }
-]
-  },
-  {
-id:"267ad9b8-a13e-49a9-b035-d05dbb675140"   ,
-title_en:"Luxurious Elixir Rough", 
-title_ru: "Роскошный эликсир грубый",
-price:219.98,
-discount_price:1.00,
-is_discounted:true,
-is_show_new_arrival:false,
-is_best_sellers:false,
-is_recommended:false,
-category:"Designer Delights Collection",
-quantity:21.0,
-description_ru:"100 ml",
-description_en:"150 ml" ,
-gender:'Male',
-image:[{
-  id:"121939e0-837f-464c-95f2-80a8e140f295",
-  image:"https://parfumeapi.pythonanywhere.com/media/product_images/p1_nn54dnz.png"
-  }
-]
-  }
-]
-
-
-    export const itemProducts=[
-      {
-        title: 'Home',
-        href:"/"
-      },
-      {
-        title: 'App',
-        href: '#',
-      },
-      {
-        title: 'Products',
-      },
-      
-    ]
-    export const itemProductsD=[
-      {
-        title: 'Home',
-        href:"/"
-      },
-      {
-        title: 'App',
-        href: '#',
-      },
-      {
-        title: 'Products',
-        href:'/app/products'    
-      },
-      {
-        title:'Product'
-      }
-    ]
-
-    export const itemProductsImage=[
-      {
-        title: 'Home',
-        href:"/"
-      },
-      {
-        title: 'App',
-        href: '#',
-      },
-      {
-        title: 'Images',
-      },
-    ]
-
-    export const itemProductsImageD=[
-      {
-        title: 'Home',
-        href:"/"
-      },
-      {
-        title: 'App',
-        href: '#',
-      },
-      {
-        title: 'Images',
-        href:'/app/product-images'    
-      },
-      {
-        title:'Image'
-      }
-    ]
-
     export const itemSetting=[
       {
         title: 'Home',
@@ -469,8 +158,7 @@ image:[{
     export const pasTitle="Please enter your old password, for security's sake, and then enter your new password twice so we can verify you typed it in correctly."
 
   export const pasVerify="Enter the same password as before, for verification."
-
-    export const pasCharacters=[
+export const pasCharacters=[
       {
         id:1,
         character:"Your password can't be too similar to your other personal information."
@@ -488,3 +176,17 @@ image:[{
         character:"Your password can't be entirely numeric."
       },
     ]
+
+
+
+export  const exem_create={
+  "category": 1,
+    "topics": [
+  1,2
+],
+    "start_time": "2024-12-25 10:18:23",
+    "end_time": "2024-12-26 10:18:23",
+    "total_questions": 10,
+    "time_limit": 30
+
+}

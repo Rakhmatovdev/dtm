@@ -1,39 +1,57 @@
 import React, { useState } from 'react';
 import { UploadOutlined } from '@ant-design/icons';
-import type { UploadFile, UploadProps } from 'antd';
-import { Button, Upload } from 'antd';
+import { Button, Upload, message } from 'antd';
+import type { UploadFile } from 'antd/es/upload/interface';
+import axios from 'axios';
 
-interface AppProps {
-    
-  }
-
-const UFile: React.FC<AppProps> = () => {
+const UFile: React.FC = () => {
   const [fileList, setFileList] = useState<UploadFile[]>([]);
-  const handleChange: UploadProps['onChange'] = (info) => {
-    let newFileList = [...info.fileList];
 
-    newFileList = newFileList.slice(-2);
+  // Fayl yuklashni oldini olish va faylni saqlash
+  const beforeUpload = (file: UploadFile) => {
+    setFileList((prevList) => [...prevList, file]); // Faylni mahalliy holatda saqlash
+    return false; // Faylni avtomatik yuklashni to'xtatish
+  };
 
-
-    newFileList = newFileList.map((file) => {
-      
-      if (file.response) {
-        file.url = file.response.url;
-      }
-      return file;
+  // Fayllarni qo'lda yuborish
+  const handleUpload = async () => {
+    const formData = new FormData();
+    fileList.forEach((file) => {
+      formData.append('files', file as any); // Fayllarni qo'shish
     });
-    setFileList(newFileList);
+
+    try {
+      const response = await axios.post('YOUR_UPLOAD_ENDPOINT_URL', formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+        },
+      });
+      message.success('Fayllar muvaffaqiyatli yuborildi');
+      console.log('Server javobi:', response);
+    } catch (error) {
+      message.error('Fayllarni yuborishda xato yuz berdi');
+      console.error('Xato:', error);
+    }
   };
 
-  const props = {
-    action: 'https://660d2bd96ddfa2943b33731c.mockapi.io/api/upload',
-    onChange: handleChange,
-    multiple: true,
-  };
   return (
-    <Upload {...props} fileList={fileList} className='fff sm:gap-2'>
-      <Button className='sm:h-9' icon={<UploadOutlined />}>Upload</Button>
-    </Upload>
+    <div>
+      <Upload
+        beforeUpload={beforeUpload}
+        fileList={fileList}
+        multiple
+      >
+        <Button icon={<UploadOutlined />}>Fayl tanlash</Button>
+      </Upload>
+      <Button
+        type="primary"
+        onClick={handleUpload}
+        disabled={fileList.length === 0}
+        style={{ marginTop: 16 }}
+      >
+        Yuborish
+      </Button>
+    </div>
   );
 };
 

@@ -1,9 +1,8 @@
 
 import {QueryClient, QueryClientProvider} from "@tanstack/react-query";
-import {FC} from "react";
-
 
 import { ChildrenProps, IError } from "@/types";
+import {FC} from "react";
 
 
 const onHandleError = (error:Error | IError) => {

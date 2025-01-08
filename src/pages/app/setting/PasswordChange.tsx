@@ -16,7 +16,7 @@ const PasswordChange = () => {
   const onSubmit: SubmitHandler<TPassword> = (data) => console.log(data);
 
   return (
-    <div className="h-[86.2vh]">
+    <div className="soh">
  <UBreadcrumb  items={itemPassword} />
       <div className="mt-7">
         <form
