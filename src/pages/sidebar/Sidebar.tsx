@@ -1,24 +1,23 @@
-import { Link, Outlet, useNavigate } from "react-router";
-import Navbar from "../home/Navbar";
-import { useEffect, useState } from "react";
 import {
-  MenuFoldOutlined,
-  MenuUnfoldOutlined,
-  BarsOutlined,
   AppstoreOutlined,
   FileAddOutlined,
-  UserSwitchOutlined,
+  MenuFoldOutlined,
+  MenuUnfoldOutlined,
   PlayCircleOutlined,
   UploadOutlined,
+  UserSwitchOutlined
 } from "@ant-design/icons";
 import { Button, Layout, Menu, theme } from "antd";
+import { useEffect, useState } from "react";
+import { Link, Outlet, useNavigate } from "react-router";
 import logo from "../../../public/logo.png";
+import Navbar from "../home/Navbar";
 
 const { Header, Sider, Content } = Layout;
 export default function ISidebar() {
   const navigate = useNavigate();
-  const token = sessionStorage.getItem("accessToken");
-  const role = sessionStorage.getItem("role");
+  const token = localStorage.getItem("accessToken");
+  const role = localStorage.getItem("role");
 
   useEffect(() => {
     if (!token) {

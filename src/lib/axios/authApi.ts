@@ -9,7 +9,7 @@ const authApi = axios.create({
 authApi.interceptors.request.use(
   (config) => {
     console.log('Auth Interceptor ishlamoqda',config);
-    const token = sessionStorage.getItem('accessToken');
+    const token = localStorage.getItem('accessToken');
     if (token) {config.headers['Authorization'] = `Bearer ${token}`;}
     return config;
   },

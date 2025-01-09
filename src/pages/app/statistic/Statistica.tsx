@@ -2,7 +2,7 @@ import UBreadcrumb from "@/components/ui/UBreadcrumb";
 import UCheckbox from "@/components/ui/UCheckbox";
 import userService from "@/services/user-service";
 import { TDeleted } from "@/types";
-import { itemsExam } from "@/types/data";
+import {  itemStatistic } from "@/types/data";
 import { useMutation } from "@tanstack/react-query";
 import { notification } from "antd";
 import { format } from 'date-fns';
@@ -25,10 +25,7 @@ const Statistic = () => {
         },
     });
 
-    console.log(exams?.results);
-    
     const {
-        control,
         handleSubmit
     } = useForm({defaultValues:{
             is_deleted:'',
@@ -45,18 +42,14 @@ useEffect(() => {
 
     return (
         <div className="soh">
-            <UBreadcrumb items={itemsExam} />
+            <UBreadcrumb items={itemStatistic} />
 
             <form className="" onSubmit={handleSubmit(onSubmit)} >
                 <div className="relative overflow-x-auto shadow-md sm:rounded-lg mt-4 sm:mt-7">
                     <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
                         <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                         <tr>
-                            <th scope="col" className="p-2 sm:p-4">
-                                <div className="flex items-center">
-                                    <UCheckbox control={control} name="all-check"/>
-                                </div>
-                            </th>
+                           
                             <th scope="col" className="tp">
                                 ID
                             </th>
@@ -82,12 +75,7 @@ useEffect(() => {
                                     key={exam.exam_id}
                                     className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
                                 >
-                                    <td className="w-2 p-2 sm:w-4 sm:p-4">
-                                        <div className="flex items-center">
-                                            <UCheckbox name="delete_exam_id"
-                                                       control={control}/>
-                                        </div>
-                                    </td>
+                                
                                     <th
                                         scope="row"
                                         className="tp font-medium text-gray-900  dark:text-white"

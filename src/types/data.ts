@@ -13,6 +13,38 @@ export const itemsExam=[
       title: "Create",
     },
   ]
+export const itemStatistic=[
+    {
+      title: "Home",
+      href: "/",
+    },
+    {
+      title: "User",
+      href: "#",
+    },
+    {
+      title: "Profile",
+    },
+  ]
+export const itemStatisticD=[
+    {
+      title: "Home",
+      href: "/",
+    },
+    {
+      title: "User",
+      href: "#",
+    },
+    {
+      title: "Profile",
+    },
+    {
+      title: "Attempts",
+    },
+  ]
+
+
+
   export  const Dproducts = [
     {
       id: "8d49dd94-3bd6-4c19-a5a5-a967bbc93c45",
@@ -122,6 +154,20 @@ export const itemCreateD=[
     },
     {
       title:'Categorie'
+    }
+  ]
+  export const itemUpload=[
+    {
+      title: 'Home',
+      href:"/"
+    },
+    {
+      title: 'App',
+      href: '#',
+    },
+    {
+      title: 'Upload',
+    
     }
   ]
 

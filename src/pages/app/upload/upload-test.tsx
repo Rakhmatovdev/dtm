@@ -5,7 +5,7 @@ import type { UploadProps, UploadFile } from 'antd';
 import { useForm, Controller } from 'react-hook-form';
 import UInput from "@/components/ui/UInput";
 import UBreadcrumb from "@/components/ui/UBreadcrumb";
-import { itemCategorieD } from "@/types/data";
+import {  itemUpload } from "@/types/data";
 import { useMutation } from '@tanstack/react-query';
 import myServices from '@/services';
 import { Option } from 'antd/es/mentions';
@@ -83,7 +83,7 @@ const UploadTests: React.FC = () => {
 
   return (
     <div className="soh">
-      <UBreadcrumb items={itemCategorieD} />
+      <UBreadcrumb items={itemUpload} />
 
       <form className="mt-7" onSubmit={handleSubmit(onSubmit)}>
         <div className="flex gap-4 flex-col sm:flex-row">
@@ -98,8 +98,8 @@ const UploadTests: React.FC = () => {
               <p className="utext sm:pr-[10px]">Topic Name <span className="text-rose-500">*</span></p>
               <UInput className="sm:w-[200px]" name="topic_name" control={control} />
             </div>
-            <div className="fff sm:gap-32">
-              <p className="utext pr-[24px]">File <span className="text-rose-500">*</span></p>
+            <div className="fff sm:gap-36">
+              <p className="utext pr-[15px]">File <span className="text-rose-500">*</span></p>
               <Controller
                 name="file"
                 control={control}

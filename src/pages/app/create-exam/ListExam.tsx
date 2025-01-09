@@ -6,18 +6,16 @@ import { useMutation } from "@tanstack/react-query";
 import { format } from "date-fns";
 import { useEffect } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
-import { Link, useNavigate } from "react-router";
+import { useNavigate } from "react-router";
 
 const CreateExam = () => {
   const navigate = useNavigate();
+  const role = localStorage.getItem("role");
 
-  // Foydalanuvchi rolini olish
-  const role = sessionStorage.getItem("role");
-
-  // Admin emasligini tekshirish
+  
   useEffect(() => {
     if (role !== "admin") {
-      navigate("/"); // Foydalanuvchini "/" sahifasiga yo'naltirish
+      navigate("/"); 
     }
   }, [role, navigate]);
 
@@ -92,7 +90,7 @@ const CreateExam = () => {
                       scope="row"
                       className="tp font-medium text-gray-900  dark:text-white"
                     >
-                      <Link to={`${product.id}/change`}>{product.id}</Link>
+                      <div>{product.id}</div>
                     </th>
                     <td className="tp">{product.category_name}</td>
                     <td className="tp ">

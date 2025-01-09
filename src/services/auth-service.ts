@@ -1,5 +1,5 @@
-import apiClient, {endpoints} from "../lib/axios";
-import {LoginData, RegisterData} from "@/types";
+import { LoginData, RegisterData } from "@/types";
+import apiClient, { endpoints } from "../lib/axios";
 
 
 
@@ -9,8 +9,8 @@ export const AuthService = {
         try {
             const response = await apiClient.post(endpoints.auth.signIn, data);
             const token = response.data.access;
-            sessionStorage.setItem('accessToken', token);
-            sessionStorage.setItem('role', response.data.role);
+            localStorage.setItem('accessToken', token);
+            localStorage.setItem('role', response.data.role);
             return token;
         } catch (error) {
             console.error("Login failed", error);
@@ -23,8 +23,8 @@ export const AuthService = {
         try {
             const res=await apiClient.post(endpoints.auth.signUp, data);
             const token = res.data.access;
-            sessionStorage.setItem('accessToken', token);
-            sessionStorage.setItem('role', 'user');
+            localStorage.setItem('accessToken', token);
+            localStorage.setItem('role', 'user');
             return token;
         } catch (error) {
             console.error("Registration failed", error);
@@ -34,13 +34,13 @@ export const AuthService = {
 
 
     logout: (): void => {
-        sessionStorage.removeItem('role');
-        sessionStorage.removeItem('accessToken');
+        localStorage.removeItem('role');
+        localStorage.removeItem('accessToken');
     },
 
 
     isAuthenticated: (): boolean => {
-        return !!sessionStorage.getItem('accessToken');
+        return !!localStorage.getItem('accessToken');
     },
 };
 
