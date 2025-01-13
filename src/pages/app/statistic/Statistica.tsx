@@ -1,5 +1,4 @@
 import UBreadcrumb from "@/components/ui/UBreadcrumb";
-import UCheckbox from "@/components/ui/UCheckbox";
 import userService from "@/services/user-service";
 import { TDeleted } from "@/types";
 import {  itemStatistic } from "@/types/data";

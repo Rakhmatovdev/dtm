@@ -60,7 +60,7 @@ const AddExam = () => {
     const {mutate:mutateCreate}=useMutation({
         mutationKey:['create'],
         mutationFn: examService.create,
-        onSuccess: (data) => {
+        onSuccess: () => {
  navigate('/app/exam')
  message.success("Exam created successfully ");
         },

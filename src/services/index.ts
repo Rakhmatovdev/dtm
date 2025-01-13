@@ -1,4 +1,4 @@
-import apiClient, {endpoints} from "@/lib/axios";
+import {endpoints} from "@/lib/axios";
 import authApi from "@/lib/axios/authApi.ts";
 
 
